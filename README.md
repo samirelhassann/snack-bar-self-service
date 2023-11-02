@@ -1,58 +1,25 @@
-# FIAP SOAT - Grupo 34 - Tech Challenge #01
+# Snack bar self service
 
-Repositório do Tech Challenge #01 da FIAP/Alura, no curso SOAT3. Foram utilizadas técnicas de DDD e Arquitetura Hexagonal para realizar o desenvolvimento da Aplicação.
+This project is the backend of a self service software implemented on a snack bar scope. DDD techniques and Hexagonal Architecture were considered
 
-# Documentação (DDD)
+## Language and Tools
 
-Para realizar a documentação do DDD, criamos um documento no [Notion](https://notion.so) para centralizar e organizar melhor os entregáveis e processos envolvidos, é possível realizar o acesso deste documento clicando [aqui](https://samirelhassann.notion.site/Documenta-o-Tech-Challenge-1-Grupo-34-bf92a1a97de5400abfaef9e0b6bcd0e2?pvs=4)
+<p align="left"> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> </p>
 
+## Additional Libraries
 
+- fastify
+- prisma
+- vitest
 
-# Como rodar a aplicação?
+## Usage 
 
-### Utilizando Docker
-
-Pré-requisitos:
-
-- Docker instalado e funcional na máquina, para conseguir gerar os containers com sucesso.
-
-Rode o seguinte comando no root do projeto:
+1. Run the script to install the dependencies and configure prisma
 ```bash
-docker-compose up -d
+yarn setup
 ```
 
-A geração da camada de API e Banco de Dados será feita automaticamente. Ele irá gerar os containers necessários para rodar a aplicação, assim como aplicar os migrations dentro do banco de dados.  
-
-A aplicação estará disponível, por padrão, na rota [`http://localhost:3333`](http://localhost:3333).
-
-### Rodando Localmente
-
-Caso queira rodar localmente, sem utilizar o docker:
-
-1. Instale as dependências
-```bash
-yarn install
-```
-
-2. Atualize o prisma
-```bash
-yarn prisma generate && yarn prisma migrate dev
-```
-
-3. Inicialize a aplicação
+2. Run the application
 ```bash
 yarn dev
 ```
-
-A aplicação estará disponível, por padrão, na rota [`http://localhost:3333`](http://localhost:3333).
-
-# Documentação (API)
-
-Ao rodar o projeto é possível acessar com o endpoint `/docs` a documentação completa no [Redoc](https://github.com/Redocly/redoc) ou em `/docs-swagger` para a visualização do [Swagger](swagger.io) padrão.
-
-### Membros
-
-- [Bruno De Masi](github.com/brunodmsi)
-- [Gabriel Almeida](github.com/gabrielgqa)
-- [Leandro Arzolla Coelho](github.com/leandrocoelho1)
-- [Samir El Hassan](github.com/samirelhassann)
