@@ -1,0 +1,40 @@
+# @name get-orders
+GET http://localhost:3333/orders
+
+###
+
+# @name get-order-by-id 
+GET http://localhost:3333/orders/1676f8da-6649-47c3-bab7-30a34477de7c
+
+### 
+
+# @name create-order
+POST http://localhost:3333/orders  
+content-type: application/json
+
+{
+  "clientId": "93714d13-10b4-40a0-89d4-15fa5dc5030b",
+  "paymentMethod": "QR_CODE",
+  "paymentStatus": "PENDING_PAYMENT",
+  "combos": [
+    {
+      "sandwichId": "0a1ca055-737e-45af-9159-c3ac1617afb2",
+      "drinkId": "71abde36-b3cd-419b-8bed-8e61f4323078",
+      "quantity": 2,
+      "annotation": "remove the tomatos"
+    }
+  ]
+}
+
+### 
+
+
+# @name update-order-status
+PATCH http://localhost:3333/orders/4dca82ee-f925-4ac7-aeec-f1f4b527287d
+content-type: application/json
+
+{
+  "status": "READY"
+}
+
+

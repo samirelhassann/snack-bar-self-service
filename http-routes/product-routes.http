@@ -1,0 +1,40 @@
+# @name get-products
+GET http://localhost:3333/products
+
+### 
+
+# @name get-product-by-id
+GET http://localhost:3333/products/0ed117a2-5d6f-4f54-9f1b-748b0df9f37e
+
+### 
+
+# @name create-product
+POST http://localhost:3333/products
+content-type: application/json
+
+{
+  "name": "Lanche de costela 2",
+  "description": "lanche de costela",
+  "price": 25,
+  "category": "SANDWICH"
+}
+
+### 
+
+# @name edit-product
+PUT http://localhost:3333/products/150ee6db-c9b4-4351-990d-1d73046f851d
+content-type: application/json
+
+{
+  "name": "hamburguer de costela 2",
+  "price": 20,
+  "description": "hamburguer de costela",
+  "category": "DESSERT"
+}
+
+### 
+
+# @name inactive-product
+DELETE http://localhost:3333/products/0ed117a2-5d6f-4f54-9f1b-748b0df9f37e
+content-type: application/json
+
