@@ -23,3 +23,14 @@ yarn setup
 ```bash
 yarn dev
 ```
+
+## Tests
+
+To run the unit test of the application, run:
+```bash
+yarn test
+```
+
+## Documentation
+
+To see the documentation open `localhost:3333/docs-swagger` and to see the redoc open `localhost:3333/docs`
